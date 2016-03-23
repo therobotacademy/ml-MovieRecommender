@@ -8,8 +8,6 @@ This sample code shows how to build, evaluate, and deploy a
 recommender model for movies. You could use this model to power
 "Recommended for you" or suggest "Similar Movies" features.
 
-[![Image of explore by item](/assets/explore_items.png)]()
-
 
 ## Get started
 
@@ -41,14 +39,17 @@ recommender model for movies. You could use this model to power
    The `-i` flag causes Python to drop into an interactive interpreter
    after the script executes.
 
-   Once the model has been created, a browser window should open
-   to let you explore and interact with your recommender model.
-
    Alternatively, you can also run the provided IPython Notebook:
 
    ```bash
    ipython notebook movie_recommender.ipynb
    ```
+
+   Once the model has been created, a browser window should open
+   to let you explore and interact with your recommender model:
+
+   [![Image of explore by item](/assets/explore_items.png)]()
+
 
 ## Learn More and Next Steps
 
