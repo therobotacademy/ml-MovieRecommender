@@ -24,7 +24,8 @@ recommender model for movies. You could use this model to power
    cd sample-movie-recommender
    ```
 
-3. Run the following script to download the sample project data:
+3. While in the `sample-movie-recommender` directory, run the following script
+   to download the sample project data:
 
   ```bash
   python download_data.py
@@ -39,10 +40,15 @@ recommender model for movies. You could use this model to power
 
    The `-i` flag causes Python to drop into an interactive interpreter
    after the script executes.
-   
+
    Once the model has been created, a browser window should open
    to let you explore and interact with your recommender model.
 
+   Alternatively, you can also run the provided IPython Notebook:
+
+   ```bash
+   ipython notebook movie_recommender.ipynb
+   ```
 
 ## Learn More and Next Steps
 
@@ -53,8 +59,8 @@ Once you have the sample project running, you can try the following:
   - [Use the model in your app](./LEARN_MORE.md#integrate-with-your-app)
 
 
-To find out more about building recommender models, check out the 
-[user guide](https://dato.com/learn/userguide/recommender/introduction.html) 
+To find out more about building recommender models, check out the
+[user guide](https://dato.com/learn/userguide/recommender/introduction.html)
 or [API documentation](https://dato.com/products/create/docs/graphlab.toolkits.recommender.html).
 
 

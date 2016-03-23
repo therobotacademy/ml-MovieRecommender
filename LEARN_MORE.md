@@ -13,7 +13,7 @@ The `movie_recommender.py` script performs the following actions:
 
 ### Load Data
 
-For this sample, two datasets are loaded: movie item data (27,279 movies), 
+For this sample, two datasets are loaded: movie item data (27,279 movies),
 and user action data (1,000,000 ratings).
 
 Movie **item data** describes individual movies, with fields such as title, description, tags, etc.:
@@ -37,7 +37,7 @@ userId | movieId | rating | timestamp
 ### Prepare Data
 
 Once the data is loaded, you typically want to clean it up or transform it in various ways.
-Here, we will remove items that were rated less than 5 times, because sometimes infrequently rated 
+Here, we will remove items that were rated less than 5 times, because sometimes infrequently rated
 items can cause the model to behave unpredictably.
 
 We also extract the `year` and `title` from the original `title` column, which
@@ -70,19 +70,19 @@ the model:
 You can replace the sample data provided in this project with your own
 dataset. The easiest way to do this is to look at the `items.csv` and
 `ratings.csv` file loaded by the `movie_recommender.py` script and format your data
-the same way. Then, simply replace the filenames in the `gl.SFrame.read_csv` 
+the same way. Then, simply replace the filenames in the `gl.SFrame.read_csv`
 commands in `movie_recommender.py` with your own data filenames.
 
-If you want to use different column names in your data files, you will 
+If you want to use different column names in your data files, you will
 also need to make other changes to the example script. For example,
-if your data contains a `bookId` column instead of a `movieId` column, 
+if your data contains a `bookId` column instead of a `movieId` column,
 you will need to replace references to `movieId` in `movie_recommender.py`.
 
 Once you have built an initial model from your own data, you might also
 find that the model performance can be improved if you change or replace the
 data cleaning and feature extraction commands in `movie_recommender.py` with customized instructions.
 The ideal set of data transformations typically varies from dataset to dataset,
-so you will have to experiment a bit. For some suggestions, 
+so you will have to experiment a bit. For some suggestions,
 see our [user guide on feature engineering](https://dato.com/learn/userguide/feature-engineering/introduction.html).
 
 
@@ -150,4 +150,3 @@ And the resulting response:
    "from_cache":false
 }
 ```
-
