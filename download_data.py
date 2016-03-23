@@ -33,7 +33,7 @@ def unzip(file, target_dir):
 if __name__ == '__main__':
 
 	# Path to the dataset: ../../datasets
-	data_dir = path.join(path.dirname(path.realpath(__file__)), 'dataset')
+	data_dir = './dataset'
 
 	# MovieLens dataset collected by the GroupLens Research Project at the University of Minnesota.
 	download("http://files.grouplens.org/datasets/movielens/ml-20m.zip", path.join(data_dir, 'ml-20m.zip'))
