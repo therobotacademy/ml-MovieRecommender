@@ -16,7 +16,7 @@ recommender model for movies. You could use this model to power
 1. Before you begin, make sure you have [installed GraphLab Create](https://dato.com/download/),
    a Python package for machine learning.
 
-2. [Download and extract the example code](https://github.com/dato-code/dato-samples/archive/master.zip)
+2. [Download and extract the example code](https://github.com/dato-code/sample-movie-recommender/archive/master.zip)
    to a directory on your machine, or clone it with the following command:
 
    ```bash
@@ -66,7 +66,7 @@ or [API documentation](https://dato.com/products/create/docs/graphlab.toolkits.r
 
 ## Troubleshooting
 
-If you are having trouble, please [create a Github Issue](https://github.com/dato-code/dato-samples/issues/new)
+If you are having trouble, please [create a Github Issue](https://github.com/dato-code/sample-movie-recommender/issues/new)
 or start a discussion on the [user forum](http://forum.dato.com/).
 
 
