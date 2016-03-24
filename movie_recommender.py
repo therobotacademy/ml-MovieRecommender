@@ -47,5 +47,6 @@ view = model.views.overview(validation_set=validation_data,
                             user_data=users,
                             item_data=items,
                             item_name_column='title',
-                            item_url_column='url')
+                            item_url_column='url',
+                            user_name_column='name')
 view.show()
