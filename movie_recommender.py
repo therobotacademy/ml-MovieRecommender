@@ -45,9 +45,8 @@ users = gl.SFrame.read_csv(path.join(data_dir, 'user_names.csv'))
 # Interactively evaluate and explore recommendations
 view = model.views.overview(validation_set=validation_data,
                             user_data=users,
-                            user_name_column='name', 
+                            user_name_column='name',
                             item_data=items,
                             item_name_column='title',
-                            item_url_column='url',
-                            user_name_column='name')
+                            item_url_column='url')
 view.show()
