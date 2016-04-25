@@ -23,9 +23,9 @@ recommender model for movies. You could use this model to power
 3. While in the `sample-movie-recommender` directory, run the following script
    to download the sample project data:
 
-  ```bash
-  python download_data.py
-  ```
+   ```bash
+   python download_data.py
+   ```
 
 4. Make sure you are working in a Python environment with GraphLab Create installed
    (e.g. if you installed GraphLab Create using the Dato Launcher, you can use the Launcher to open a GraphLab Create Terminal).
@@ -54,7 +54,6 @@ Once you have the sample project running, you can try the following:
 
   - [Learn more about how the sample works](./LEARN_MORE.md#how-it-works)
   - [Try it on your own data set](./LEARN_MORE.md#use-your-own-data)
-  - [Use the model in your app](./LEARN_MORE.md#integrate-with-your-app)
 
 
 To find out more about building recommender models, check out the

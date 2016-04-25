@@ -1,14 +1,15 @@
 # Movie Recommender: Learn More
 
 This document provides more detail about the sample movie recommender.
-
+You can learn more about building recommenders with GraphLab Create in
+our [user guide](https://dato.com/learn/userguide/recommender/introduction.html).
 
 ## How it works
 
 The `movie_recommender.py` script performs the following actions:
 
 ```
-[Load Data] -> [Prepare Data] -> [Train Model] -> [Explore Model]
+Load Data -> Prepare Data -> Train Model -> Explore Model
 ```
 
 ### Load Data
@@ -49,20 +50,22 @@ See our [user guide on feature engineering](https://dato.com/learn/userguide/fea
 ### Train Recommender Model
 
 Next, we randomly split the data into a training set and validation set.
-We use [`gl.recommender.create`](https://dato.com/products/create/docs/generated/graphlab.recommender.create.html) to build a recommender model on the training set with default settings.
-
-For more background about recommender models in GraphLab Create, see our [guide for recommender systems](https://dato.com/learn/userguide/recommender/introduction.html).
+We use [`gl.recommender.create`](https://dato.com/products/create/docs/generated/graphlab.recommender.create.html)
+to build a recommender model on the training set with default settings.
 
 
 ### Explore the Model
 
-Once you've trained the model, the sample script launches
-two interactive web applications for exploring and evaluating
-the model:
+Once you've trained the model, you can use it to make recommendations or
+to find similar items. The sample script launches an interactive web-based view for exploring
+and evaluating the model:
 
 ![Screenshot of Exploration](/assets/explore.png)
 
-![Screenshot of Evaluation](/assets/evaluate.png)
+![Screenshot of Evaluation](/assets/evaluate-1.png)
+
+Find more information about how to use your model
+in the [user guide](https://dato.com/learn/userguide/recommender/using-trained-models.html).
 
 
 ## Use your own data
@@ -84,69 +87,3 @@ data cleaning and feature extraction commands in `movie_recommender.py` with cus
 The ideal set of data transformations typically varies from dataset to dataset,
 so you will have to experiment a bit. For some suggestions,
 see our [user guide on feature engineering](https://dato.com/learn/userguide/feature-engineering/introduction.html).
-
-
-## Integrate with your app
-
-The interactive views that are created by the `movie_recommender.py` script
-are powered by a local HTTP server running inside your Python process.
-You can use this same service and the API it exposes to get started
-quickly integrating your recommender model into your own app.
-
-Here is a summary of the recommender model's REST API.
-The returned items are provided in JSON object format:
-
-method | parameters | return
------- | ---------- | ------
-more_like_this | item_id (int) | a list of items
-personalized_recommendations | item_ids (list) | a list of items
-search  | query (str) | a list of items
-details | item_ids (list) | a list of items
-
-Requests must be POSTed to your view's url with
-a JSON body specifying the method and parameters.
-
-Below is a sample request body:
-```json
-{  
-   "api_key":"",
-   "data":{  
-      "method":"more_like_this",
-      "item_id":480,
-      "num_recs":1
-   }
-}
-```
-
-And the resulting response:
-```json
-{  
-   "status":"ok",
-   "version":1,
-   "uuid":"00000000-0000-0000-0000-000000000000",
-   "model":"00000000-0000-0000-0000-000000000000",
-   "response":{  
-      "method":"more_like_this",
-      "result":{
-         "column_names":[
-           "movieId","score","rank","title","genres",
-           "imdbId","tmdbId","path","year"
-         ],
-         "data":[
-            {
-               "genres":["Comedy", "Drama", "Romance", "War"],
-               "movieId":356,
-               "title":"Forrest Gump",
-               "imdbId":109830,
-               "rank":1,
-               "score":0.5820625484621349,
-               "tmdbId":13,
-               "year":"1994",
-               "path":"http://image.tmdb.org/t/p/w500/z4ROnCrL77ZMzT0MsNXY5j25wS2.jpg"
-            }
-         ]
-      }
-   },
-   "from_cache":false
-}
-```
