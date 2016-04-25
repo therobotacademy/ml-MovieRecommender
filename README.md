@@ -27,8 +27,9 @@ recommender model for movies. You could use this model to power
   python download_data.py
   ```
 
-4. Making sure you are working in a Python environment with GraphLab Create installed,
-   run the `movie_recommender.py` script to build and explore the recommender model on your machine:
+4. Make sure you are working in a Python environment with GraphLab Create installed
+   (e.g. if you installed GraphLab Create using the Dato Launcher, you can use the Launcher to open a GraphLab Create Terminal).
+   Then, run the `movie_recommender.py` script to build and explore the recommender model on your machine:
 
    ```bash
    python -i movie_recommender.py
@@ -44,9 +45,7 @@ recommender model for movies. You could use this model to power
    ```
 
    Once the model has been created, a browser window should open
-   to let you explore and interact with your recommender model:
-
-   [![Image of explore by item](/assets/explore_items.png)]()
+   to let you explore and interact with your recommender model.
 
 
 ## Learn More and Next Steps
