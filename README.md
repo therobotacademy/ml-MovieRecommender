@@ -9,7 +9,7 @@ recommender model for movies. You could use this model to power
 
 ## Get started
 
-1. Before you begin, make sure you have [installed GraphLab Create](https://dato.com/download/),
+1. Before you begin, make sure you have [installed GraphLab Create 1.9](https://dato.com/download/),
    a Python package for machine learning.
 
 2. [Download and extract the example code](https://github.com/dato-code/sample-movie-recommender/archive/master.zip)
