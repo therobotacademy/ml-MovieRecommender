@@ -1,5 +1,6 @@
 from os import path
 import graphlab as gl
+from datetime import datetime
 
 ### Load Data ###
 # MovieLens dataset collected by the GroupLens Research Project at the University of Minnesota.
@@ -27,7 +28,7 @@ actions = actions.filter_by(rare_items['movieId'], 'movieId', exclude=True)
 items['year'] = items['title'].apply(lambda x: x[-5:-1])
 items['title'] = items['title'].apply(lambda x: x[:-7])
 items['genres'] = items['genres'].apply(lambda x: x.split('|'))
-
+actions['timestamp'] = actions['timestamp'].astype(datetime)
 
 ### Train Recommender Model ###
 
