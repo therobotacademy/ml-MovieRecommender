@@ -13,7 +13,7 @@ data_dir = './dataset/ml-20m'
 items = gl.SFrame.read_csv(path.join(data_dir, 'movies.csv'))
 
 # Table of interactions between users and items: userId, movieId, rating, timestamp
-actions = gl.SFrame('actions.sf')
+actions = gl.SFrame.read_csv(path.join(data_dir, 'ratings.csv'))
 
 ### Prepare Data ###
 
